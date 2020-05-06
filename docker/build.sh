@@ -26,7 +26,7 @@ docker build \
   --build-arg VERSION="$VERSION" \
   -f Dockerfile -t $IMAGE ../
 
-if [[ "$CI" = true ]]
+if [[ "$CI_PUSH" = true ]]
 then
     docker push $IMAGE
     docker tag $IMAGE docker.pkg.github.com/containersolutions/trow/trow:latest 
