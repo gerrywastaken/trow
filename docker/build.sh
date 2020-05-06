@@ -29,8 +29,8 @@ docker build \
 if [[ "$CI_PUSH" = true ]]
 then
     docker push $IMAGE
-    docker tag $IMAGE docker.pkg.github.com/containersolutions/trow/trow:latest 
-    docker push docker.pkg.github.com/containersolutions/trow/trow:latest 
-    docker tag $IMAGE docker.pkg.github.com/containersolutions/trow/trow:default 
-    docker push docker.pkg.github.com/containersolutions/trow/trow:default 
+    docker tag $IMAGE docker.pkg.github.com/containersolutions/trow/trow:latest
+    docker push docker.pkg.github.com/containersolutions/trow/trow:latest
+    docker tag $IMAGE docker.pkg.github.com/containersolutions/trow/trow:default
+    docker push docker.pkg.github.com/containersolutions/trow/trow:default
 fi
